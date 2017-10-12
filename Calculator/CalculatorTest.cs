@@ -17,21 +17,21 @@ namespace CalculatorTest
         public void substractCase()
         {
             Calculator calculator = new Calculator();
-            Assert.AreEqual(24, (calculator.add(50, 26)));
+            Assert.AreEqual(24, (calculator.substract(50, 26)));
         }
 
         [TestCase]
         public void multiplyCase()
         {
             Calculator calculator = new Calculator();
-            Assert.AreEqual(48, (calculator.add(2, 24)));
+            Assert.AreEqual(48, (calculator.multiply(2, 24)));
         }
 
         [TestCase]
         public void divideCase()
         {
             Calculator calculator = new Calculator();
-            Assert.AreEqual(3, (calculator.add(9, 3)));
+            Assert.AreEqual(3, (calculator.divide(9, 3)));
         }
 
         [TestCase]
