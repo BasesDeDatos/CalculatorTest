@@ -2,7 +2,7 @@
 
 namespace CalculatorTest
 {
-    class Test
+    class CalculatorTest
     {
         static void Main(string[] args)
         {
