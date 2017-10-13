@@ -4,46 +4,58 @@ namespace CalculatorTest
 {
     public class Calculator
     {
-        private float accumulator;
+        private int accumulator;
+        private int memory;
 
         public Calculator()
         {
             accumulator = 0;
         }
 
-        public float add(float operand1, float operand2)
+        public int add(int number)
         {
-            return (operand1 + operand2);
-        }
-
-        public float substract(float operand1, float operand2)
-        {
-            return (operand1 - operand2);
-        }
-
-        public float multiply(float operand1, float operand2)
-        {
-            return (operand1 * operand2);
-        }
-
-        public float divide(float operand1, float operand2)
-        {
-            return (operand1 / operand2);
-        }
-
-        public void save(float number)
-        {
-            accumulator = number;
-        }
-
-        public float read()
-        {
+            accumulator += number;
             return accumulator;
+        }
+
+        public int substract(int number)
+        {
+            accumulator -= number;
+            return accumulator;
+        }
+
+        public int multiply(int number)
+        {
+            accumulator *= number;
+            return accumulator;
+        }
+
+        public int divide(int number)
+        {
+            try
+            {
+                accumulator /= number;
+                return accumulator;
+            }
+            catch (DivideByZeroException exception)
+            {
+                throw new System.DivideByZeroException("Number cannot be 0");
+            }
+        }
+
+        public void save()
+        {
+            memory = accumulator;
+        }
+
+        public int read()
+        {
+            return memory;
         }
 
         public void erase()
         {
-            accumulator = 0;
+            memory = 0;
         }
     }
 }
