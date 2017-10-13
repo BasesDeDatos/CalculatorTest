@@ -128,7 +128,7 @@ namespace CalculatorTest
         {
             Calculator calculator = new Calculator();
             calculator.add(10);
-            Assert.Throws<DivideByZeroException>(() => calculator.divide(0));
+            Assert.Catch<DivideByZeroException>(() => calculator.divide(0));
         }
 
         [TestCase]

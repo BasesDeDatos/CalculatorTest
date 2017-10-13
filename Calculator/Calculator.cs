@@ -32,15 +32,8 @@ namespace CalculatorTest
 
         public int divide(int number)
         {
-            try
-            {
-                accumulator /= number;
-                return accumulator;
-            }
-            catch (DivideByZeroException exception)
-            {
-                throw new System.DivideByZeroException("Number cannot be 0");
-            }
+            accumulator /= number;
+            return accumulator;
         }
 
         public void save()
